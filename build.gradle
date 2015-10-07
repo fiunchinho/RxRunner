@@ -1,0 +1,23 @@
+group 'scmspain'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = "rxrunner.Server"
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'io.reactivex:rxnetty:0.4.+'
+    compile 'com.google.code.gson:gson:2.4'
+    compile 'com.scmspain.karyon:karyon-rest-router:1.2.1'
+    compile 'com.google.inject:guice:4.0'
+    compile 'javax.ws.rs:jsr311-api:1.1.1'
+    compile 'org.slf4j:slf4j-api:1.7.0'
+    runtime 'org.slf4j:slf4j-simple:1.7.0'
+}
